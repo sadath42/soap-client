@@ -1,0 +1,168 @@
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+	xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" name="IWSLim5APservice"
+	targetNamespace="http://tempuri.org/">
+	<message name="textrec0Request">
+		<part name="xcrec" type="xs:string" />
+	</message>
+	<message name="textrec0Response">
+		<part name="return" type="xs:string" />
+	</message>
+	<message name="txtcompname1Request" />
+	<message name="txtcompname1Response">
+		<part name="return" type="xs:string" />
+	</message>
+	<message name="LoadIMG12Request">
+		<part name="xctxt" type="xs:string" />
+	</message>
+	<message name="LoadIMG12Response">
+		<part name="xretxt" type="xs:string" />
+		<part name="xrpic1" type="xs:base64Binary" />
+		<part name="xrpic2" type="xs:base64Binary" />
+		<part name="xrpic3" type="xs:base64Binary" />
+	</message>
+	<message name="RecIMG3Request">
+		<part name="xctxt" type="xs:string" />
+		<part name="xattach" type="xs:base64Binary" />
+	</message>
+	<message name="RecIMG3Response">
+		<part name="xrtxt" type="xs:string" />
+	</message>
+	<message name="IMGsd4Request">
+		<part name="xctxt" type="xs:string" />
+		<part name="xattach" type="xs:base64Binary" />
+	</message>
+	<message name="IMGsd4Response">
+		<part name="xrtxt" type="xs:string" />
+	</message>
+	<portType name="IWSLim5AP">
+		<operation name="textrec">
+			<input message="tns:textrec0Request" />
+			<output message="tns:textrec0Response" />
+		</operation>
+		<operation name="txtcompname">
+			<input message="tns:txtcompname1Request" />
+			<output message="tns:txtcompname1Response" />
+		</operation>
+		<operation name="LoadIMG1">
+			<input message="tns:LoadIMG12Request" />
+			<output message="tns:LoadIMG12Response" />
+		</operation>
+		<operation name="RecIMG">
+			<input message="tns:RecIMG3Request" />
+			<output message="tns:RecIMG3Response" />
+		</operation>
+		<operation name="IMGsd">
+			<input message="tns:IMGsd4Request" />
+			<output message="tns:IMGsd4Response" />
+		</operation>
+	</portType>
+	<binding name="IWSLim5APbinding" type="tns:IWSLim5AP">
+		<binding xmlns="http://schemas.xmlsoap.org/wsdl/soap/" style="rpc"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<operation name="textrec">
+			<operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/"
+				soapAction="urn:WSLim5APIntf-IWSLim5AP#textrec" style="rpc" />
+			<input>
+				<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+					namespace="urn:WSLim5APIntf-IWSLim5AP" />
+			</input>
+			<output>
+				<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+					namespace="urn:WSLim5APIntf-IWSLim5AP" />
+			</output>
+		</operation>
+		<operation name="txtcompname">
+			<operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/"
+				soapAction="urn:WSLim5APIntf-IWSLim5AP#txtcompname" style="rpc" />
+			<input>
+				<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+					namespace="urn:WSLim5APIntf-IWSLim5AP" />
+			</input>
+			<output>
+				<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+					namespace="urn:WSLim5APIntf-IWSLim5AP" />
+			</output>
+		</operation>
+		<operation name="LoadIMG1">
+			<operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/"
+				soapAction="urn:WSLim5APIntf-IWSLim5AP#LoadIMG1" style="rpc" />
+			<input>
+				<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+					namespace="urn:WSLim5APIntf-IWSLim5AP" />
+			</input>
+			<output>
+				<mime:multipartRelated>
+					<part xmlns="http://schemas.xmlsoap.org/wsdl/mime/">
+						<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"
+							encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+							namespace="urn:WSLim5APIntf-IWSLim5AP" />
+					</part>
+					<part xmlns="http://schemas.xmlsoap.org/wsdl/mime/">
+						<content part="xrpic1" type="application/binary" />
+					</part>
+					<part xmlns="http://schemas.xmlsoap.org/wsdl/mime/">
+						<content part="xrpic2" type="application/binary" />
+					</part>
+					<part xmlns="http://schemas.xmlsoap.org/wsdl/mime/">
+						<content part="xrpic3" type="application/binary" />
+					</part>
+				</mime:multipartRelated>
+			</output>
+		</operation>
+		<operation name="RecIMG">
+			<operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/"
+				soapAction="urn:WSLim5APIntf-IWSLim5AP#RecIMG" style="rpc" />
+			<input>
+				<mime:multipartRelated>
+					<part xmlns="http://schemas.xmlsoap.org/wsdl/mime/">
+						<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"
+							encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+							namespace="urn:WSLim5APIntf-IWSLim5AP" />
+					</part>
+					<part xmlns="http://schemas.xmlsoap.org/wsdl/mime/">
+						<content part="xattach" type="application/binary" />
+					</part>
+				</mime:multipartRelated>
+			</input>
+			<output>
+				<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+					namespace="urn:WSLim5APIntf-IWSLim5AP" />
+			</output>
+		</operation>
+		<operation name="IMGsd">
+			<operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/"
+				soapAction="urn:WSLim5APIntf-IWSLim5AP#IMGsd" style="rpc" />
+			<input>
+				<mime:multipartRelated>
+					<part xmlns="http://schemas.xmlsoap.org/wsdl/mime/">
+						<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"
+							encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+							namespace="urn:WSLim5APIntf-IWSLim5AP" />
+					</part>
+					<part xmlns="http://schemas.xmlsoap.org/wsdl/mime/">
+						<content part="xattach" type="application/binary" />
+					</part>
+				</mime:multipartRelated>
+			</input>
+			<output>
+				<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"
+					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+					namespace="urn:WSLim5APIntf-IWSLim5AP" />
+			</output>
+		</operation>
+	</binding>
+	<service name="IWSLim5APservice">
+		<port name="IWSLim5APPort" binding="tns:IWSLim5APbinding">
+			<address xmlns="http://schemas.xmlsoap.org/wsdl/soap/"
+				location="http://s11gs3s.doomdns.com:9091/WSDL/soap/IWSLim5AP" />
+		</port>
+	</service>
+</definitions>
