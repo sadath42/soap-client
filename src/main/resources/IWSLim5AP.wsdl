@@ -65,12 +65,12 @@
 			<operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/"
 				soapAction="urn:WSLim5APIntf-IWSLim5AP#textrec" style="rpc" />
 			<input>
-				<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"
+				<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded"
 					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
 					namespace="urn:WSLim5APIntf-IWSLim5AP" />
 			</input>
 			<output>
-				<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"
+				<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded"
 					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
 					namespace="urn:WSLim5APIntf-IWSLim5AP" />
 			</output>
@@ -79,12 +79,12 @@
 			<operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/"
 				soapAction="urn:WSLim5APIntf-IWSLim5AP#txtcompname" style="rpc" />
 			<input>
-				<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"
+				<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded"
 					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
 					namespace="urn:WSLim5APIntf-IWSLim5AP" />
 			</input>
 			<output>
-				<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"
+				<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded"
 					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
 					namespace="urn:WSLim5APIntf-IWSLim5AP" />
 			</output>
@@ -93,14 +93,14 @@
 			<operation xmlns="http://schemas.xmlsoap.org/wsdl/soap/"
 				soapAction="urn:WSLim5APIntf-IWSLim5AP#LoadIMG1" style="rpc" />
 			<input>
-				<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"
+				<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded"
 					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
 					namespace="urn:WSLim5APIntf-IWSLim5AP" />
 			</input>
 			<output>
 				<mime:multipartRelated>
 					<part xmlns="http://schemas.xmlsoap.org/wsdl/mime/">
-						<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"
+						<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded"
 							encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
 							namespace="urn:WSLim5APIntf-IWSLim5AP" />
 					</part>
@@ -122,7 +122,7 @@
 			<input>
 				<mime:multipartRelated>
 					<part xmlns="http://schemas.xmlsoap.org/wsdl/mime/">
-						<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"
+						<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded"
 							encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
 							namespace="urn:WSLim5APIntf-IWSLim5AP" />
 					</part>
@@ -132,7 +132,7 @@
 				</mime:multipartRelated>
 			</input>
 			<output>
-				<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"
+				<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded"
 					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
 					namespace="urn:WSLim5APIntf-IWSLim5AP" />
 			</output>
@@ -143,7 +143,7 @@
 			<input>
 				<mime:multipartRelated>
 					<part xmlns="http://schemas.xmlsoap.org/wsdl/mime/">
-						<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"
+						<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded"
 							encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
 							namespace="urn:WSLim5APIntf-IWSLim5AP" />
 					</part>
@@ -153,7 +153,7 @@
 				</mime:multipartRelated>
 			</input>
 			<output>
-				<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"
+				<body xmlns="http://schemas.xmlsoap.org/wsdl/soap/" use="encoded"
 					encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
 					namespace="urn:WSLim5APIntf-IWSLim5AP" />
 			</output>
