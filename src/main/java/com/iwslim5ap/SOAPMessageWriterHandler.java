@@ -45,7 +45,7 @@ public class SOAPMessageWriterHandler implements SOAPHandler<SOAPMessageContext>
 	    if (!outboundProperty.booleanValue()) {
 		System.out.println("SOAP Response : ");
 		printMessage(message, "Response");
-	    } else {/*
+	    } else {
 		System.out.println("SOAP Request : ");
 		SOAPEnvelope envelope = message.getSOAPPart().getEnvelope();
 		SOAPBody soapBody = envelope.getBody();
@@ -95,7 +95,7 @@ public class SOAPMessageWriterHandler implements SOAPHandler<SOAPMessageContext>
 		message.getMimeHeaders().addHeader("Content-ID", "<http://www.borland.com/rootpart.xml>");
 		message.getMimeHeaders().addHeader("Content-Location", "http://www.borland.com/rootpart.xml");
 
-		message.saveChanges();*/
+		message.saveChanges();
 		printMessage(message, "Request");
 	    }
 	} catch (Exception e) {

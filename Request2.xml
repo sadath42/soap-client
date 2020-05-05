@@ -1,5 +1,5 @@
 --MIME_boundaryB0R9532143182121
-Content-Type: multipart/related; charset=utf-8
+Content-Type:text/xml; charset=utf-8
 SOAPAction: "urn:WSLim5APIntf-IWSLim5AP#IMGsd"
 Content-ID: <http://www.borland.com/rootpart.xml>
 Content-Location: http://www.borland.com/rootpart.xml
